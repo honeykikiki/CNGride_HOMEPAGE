@@ -5,47 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CNGride</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="stylesheet" href="/css/default.css" />
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark fixed-top"
-      id="mainNav"
-      style="background-color: white"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#page-top">
+    <nav class="navbar">
+      <div class="navbar_container navbar_shark">
+        <a class="navbar_logo" href="#">
           <img src="/public/CNgrideLogo.png" alt="logo" />
         </a>
-        <button
-          class="navbar-toggler bg-black text-white"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-dark font" href="#">Company</a>
+        <div class="navbar_main_menu">
+          <ul>
+            <li>
+              <a class="navbar_list" href="#">Company</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark font" href="#">ESS Solution</a>
+            <li>
+              <a class="navbar_list" href="#">ESS Solution</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark font" href="#">Develpment Feild</a>
+            <li>
+              <a class="navbar_list" href="#">Develpment Feild</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark font" href="#">Blockchain & 전력거래소</a>
+            <li>
+              <a class="navbar_list" href="#">Blockchain & 전력거래소</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark font" href="#">ESS 구축사례</a>
+            <li>
+              <a class="navbar_list" href="#">ESS 구축사례</a>
             </li>
           </ul>
         </div>
@@ -54,21 +43,154 @@
 
     <article class="main_article_wrap">
       <section class="main_section1">
-        <h1 class="text-white">
-          ESS 시스템 구축
-          <br />
-          관리 분석 전문 기업
-        </h1>
-        <img src="/public/icon/line.png" alt="line" />
+        <div class="main_section_wrap">
+          <h1 class="main_section1_h1 animate__animated animate__slideInLeft animate__delay-1s">
+            ESS 시스템 구축
+            <br />
+            관리 분석 전문 기업
+          </h1>
+          <img
+            class="main_section_lineimg focus-in-expand"
+            src="/public/icon/line.png"
+            alt="line"
+          />
 
-        <img src="/public/icon/scroll.png" alt="scrollImg" />
+          <div class="main_section1_scroll">
+            <p>SCROLL</p>
+          </div>
+        </div>
       </section>
-      <section class="main_section2"></section>
-      <section class="main_section3"></section>
-      <section class="main_section4"></section>
-      <section class="main_section5"></section>
+
+      <section class="main_section2">
+        <div class="main_section_wrap">
+          <h1 class="main_section2_h1">EMS Solution</h1>
+
+          <div class="main_section2_content">
+            <div class="main_section2_img">
+              <img src="/public/section2_img.png" alt="EMS solution img" />
+            </div>
+
+            <div class="main_section2_text">
+              <p>
+                ESS가 연계된 시스템은 24시간 충 방전 스케줄링을 수행되어야 하므로 시스템이 중단되지
+                않고 운영, 관리되어야 하며, 전력 IT설비의 고장 발생이나 통신장애가 발생된 경우라도
+                ESS시스템의 스케줄링이 정상적으로 이루어져야 한다. 따라서, 다양한 장애가
+                발생하더라도 이를 능동적으로 대처하여 고정밀의 전력데이터를 수집, 관리하고 ESS
+                시스템을 제어하는 시스템이 요구되고 있다
+              </p>
+              <div class="main_section2_viewmore">
+                <span>view more</span>
+                <span>
+                  <img src="/public/icon/view.png" alt="moreImg" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section3">
+        <img
+            class="main_section3_lineimg_one focus-in-expand"
+            src="/public/icon/line.png"
+            alt="line"
+          />
+          <img
+            class="main_section3_lineimg_two focus-in-expand"
+            src="/public/icon/line.png"
+            alt="line"
+          />
+        <div class="main_section_wrap">
+          <h1 class="main_section3_h1">Development Felid</h1>
+
+          <div class="main_section3_content">
+            <div class="main_section3_icon">
+              <div>
+                <img src="/public/icon/development.png" alt="devlopmenticon" />
+                <p>연구용역 사업</p>
+              </div>
+              <div>
+                <img src="/public/icon/ESS.png" alt="ESSicon" />
+                <p>ESS 소프트웨어 개발</p>
+              </div>
+            </div>
+
+            <div class="main_section3_text">
+              <p>Firmware & Driver 개발</p>
+              <p>Embedded Solution 개발</p>
+              <p>ESS 관린 & 운영시스템 개발</p>
+            </div>
+
+            <div class="main_section3_viewmore">
+              <span>view more</span>
+              <span>
+                <img src="/public/icon/view.png" alt="moreImg" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section4">
+        <img
+            class="main_section4_lineimg_one focus-in-expand"
+            src="/public/icon/line.png"
+            alt="line"
+          />
+          <img
+            class="main_section4_lineimg_two focus-in-expand"
+            src="/public/icon/line.png"
+            alt="line"
+          />
+        <div class="main_section_wrap">
+          <h1 class="main_section4_h1">Blockchain & 전력거래소</h1>
+
+          <div class="main_section4_content">
+            <div class="main_section4_icon">
+              <div>
+                <img src="/public/icon/BlockChain.png" alt="devlopmenticon" />
+                <p>Blockchain</p>
+              </div>
+              <div>
+                <img src="/public/icon/electricity.png" alt="ESSicon" />
+                <p>전력거래소</p>
+              </div>
+            </div>
+
+            
+
+            <div class="main_section4_viewmore">
+              <span>view more</span>
+              <span>
+                <img src="/public/icon/view.png" alt="moreImg" />
+              </span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section5">
+        <div class="main_section_wrap"></div>
+      </section>
     </article>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div>
+            <img src="/public/CNgrideLogo.png" alt="logo" /></div>
+      
+
+        <ul>
+          <li>상호명 : (주)씨앤그리드</li>
+          <li>주소 : 대전광역시 중구 계백로 1719 센트리아 오피스텔 1406호 </li>
+          <li>대표이사 : 박승영</li>
+          <li>사업자등록번호 : 868-81-00313</li>
+          <li>대표번호 : 070-8680-9897</li>
+        </ul>
+
+        <p>copyright (c) (주)씨앤그리드(CnGride) All Rights ReseRved</p>
+    </footer>
+
+    <script src="/index.js"></script>
   </body>
 </html>

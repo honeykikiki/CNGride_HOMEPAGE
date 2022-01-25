@@ -1,27 +1,300 @@
-.main_article_wrap {
-  & > section {
-    width: 100vw;
-    height: 100vh;
+@import "./_helper/animation";
+@import "./_helper/color";
+@import "./_helper/size";
 
-    background-size: cover;
-    background-position: center;
-  }
-  & .main_section1 {
-    background-image: url("/public/main_background_img/setction1.png");
-    & h1 {
-      counter-reset: #fff;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 1000;
+  & .navbar_container {
+    max-width: 1200px;
+    padding: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: none;
+    & .navbar_logo {
+      width: 30%;
+      & img {
+        width: 12rem;
+      }
+    }
+
+    & .navbar_main_menu {
+      width: 70%;
+      & > ul {
+        display: flex;
+        justify-content: space-between;
+        & .navbar_list {
+          font-size: 1.6rem;
+        }
+        & .navbar_list:hover {
+          color: rgba($color: #000000, $alpha: 0.6);
+        }
+      }
     }
   }
+}
+
+.main_article_wrap {
+  overflow: hidden;
+  & > section {
+    width: 100vw;
+    height: calc(100vh);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    & .main_section_wrap {
+      width: 100%;
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  & .main_section1 {
+    background-image: url("/public/main_background_img/setction1.png");
+
+    & .main_section1_h1 {
+      color: #fff;
+      position: absolute;
+      left: 0;
+      bottom: 20rem;
+      font-size: 4rem;
+    }
+
+    & .main_section_lineimg {
+      position: absolute;
+      left: 0;
+      bottom: 13rem;
+    }
+
+    & .main_section1_scroll {
+      font-size: 1.4rem;
+      position: absolute;
+      right: 0;
+      bottom: 8rem;
+      color: #fff;
+      transform: rotate(90deg);
+    }
+    & .main_section1_scroll::after {
+      display: block;
+      content: "";
+      clear: both;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      border-bottom: 1px solid #fff;
+      animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+
   & .main_section2 {
     background-image: url("/public/main_background_img/setction2.png");
+
+    & .main_section2_h1 {
+      font-size: 4rem;
+      padding: 4rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    & .main_section2_content {
+      display: flex;
+      width: 100%;
+      height: 80%;
+      align-items: center;
+
+      & .main_section2_text {
+        overflow: hidden;
+        & p {
+          width: 80%;
+          font-size: 1.6rem;
+          color: #fff;
+          text-align: justify;
+          margin-right: 0;
+          margin-left: auto;
+        }
+        & .main_section2_viewmore {
+          font-size: 1.8rem;
+          color: #fff;
+          margin-top: 4rem;
+          text-align: right;
+          cursor: pointer;
+          & span {
+            overflow: hidden;
+            width: 100px;
+          }
+          & img {
+            width: 50px;
+          }
+        }
+      }
+    }
   }
+
   & .main_section3 {
     background-image: url("/public/main_background_img/setction3.png");
+    & .main_section3_lineimg_one {
+      position: absolute;
+      left: 10rem;
+      bottom: 10rem;
+    }
+    & .main_section3_lineimg_two {
+      position: absolute;
+      right: 10rem;
+      top: 10rem;
+    }
+    & .main_section3_h1 {
+      color: #fff;
+      font-size: 4rem;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    & .main_section3_content {
+      margin-top: 4rem;
+      & .main_section3_icon {
+        display: flex;
+        justify-content: center;
+        & div {
+          margin-right: 6rem;
+          margin-left: 6rem;
+          text-align: center;
+          & img {
+            width: 14rem;
+          }
+          & p {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-top: 4rem;
+          }
+        }
+      }
+      & .main_section3_text {
+        text-align: center;
+        margin-top: 4rem;
+        p {
+          color: #fff;
+          font-size: 1.8rem;
+          margin-top: 0.5rem;
+        }
+      }
+      & .main_section3_viewmore {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-top: 4rem;
+        text-align: center;
+        cursor: pointer;
+        & span {
+          overflow: hidden;
+          width: 100px;
+        }
+        & img {
+          width: 50px;
+        }
+      }
+    }
   }
+
   & .main_section4 {
     background-image: url("/public/main_background_img/setction4.png");
+    & .main_section4_lineimg_one {
+      position: absolute;
+      left: 70%;
+      bottom: 40%;
+    }
+    & .main_section4_lineimg_two {
+      position: absolute;
+      left: 45%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    & .main_section4_h1 {
+      color: #fff;
+      font-size: 4rem;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    & .main_section4_content {
+      margin-top: 4rem;
+      & .main_section4_icon {
+        display: flex;
+        justify-content: center;
+        & div {
+          margin-right: 6rem;
+          margin-left: 6rem;
+          text-align: center;
+          & img {
+            width: 14rem;
+          }
+          & p {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-top: 4rem;
+          }
+        }
+      }
+
+      & .main_section4_viewmore {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-top: 4rem;
+        text-align: center;
+        cursor: pointer;
+        & span {
+          overflow: hidden;
+          width: 100px;
+        }
+        & img {
+          width: 50px;
+        }
+      }
+    }
   }
   & .main_section5 {
     background-image: url("/public/main_background_img/setction5.png");
   }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #bcbcbc;
+  & img {
+    width: 15rem;
+  }
+  & ul {
+    color: #000;
+    & li {
+      margin-top: 1rem;
+    }
+  }
+  & p {
+    margin-top: 1rem;
+    color: #797979;
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
 }
