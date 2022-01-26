@@ -7,6 +7,10 @@
     <title>CNGride</title>
     <link
       rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
@@ -14,11 +18,12 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar_container navbar_shark">
+    <nav id="NavBar" class="navbar">
+      <div class="navbar_container">
         <a class="navbar_logo" href="#">
           <img src="/public/CNgrideLogo.png" alt="logo" />
         </a>
+
         <div class="navbar_main_menu">
           <ul>
             <li>
@@ -44,7 +49,9 @@
     <article class="main_article_wrap">
       <section class="main_section1">
         <div class="main_section_wrap">
-          <h1 class="main_section1_h1 animate__animated animate__slideInLeft animate__delay-1s">
+          <h1
+            class="main_section1_h1 animate__animated animate__slideInLeft animate__delay-1s"
+          >
             ESS 시스템 구축
             <br />
             관리 분석 전문 기업
@@ -72,11 +79,12 @@
 
             <div class="main_section2_text">
               <p>
-                ESS가 연계된 시스템은 24시간 충 방전 스케줄링을 수행되어야 하므로 시스템이 중단되지
-                않고 운영, 관리되어야 하며, 전력 IT설비의 고장 발생이나 통신장애가 발생된 경우라도
-                ESS시스템의 스케줄링이 정상적으로 이루어져야 한다. 따라서, 다양한 장애가
-                발생하더라도 이를 능동적으로 대처하여 고정밀의 전력데이터를 수집, 관리하고 ESS
-                시스템을 제어하는 시스템이 요구되고 있다
+                ESS가 연계된 시스템은 24시간 충 방전 스케줄링을 수행되어야
+                하므로 시스템이 중단되지 않고 운영, 관리되어야 하며, 전력
+                IT설비의 고장 발생이나 통신장애가 발생된 경우라도 ESS시스템의
+                스케줄링이 정상적으로 이루어져야 한다. 따라서, 다양한 장애가
+                발생하더라도 이를 능동적으로 대처하여 고정밀의 전력데이터를
+                수집, 관리하고 ESS 시스템을 제어하는 시스템이 요구되고 있다
               </p>
               <div class="main_section2_viewmore">
                 <span>view more</span>
@@ -91,15 +99,15 @@
 
       <section class="main_section3">
         <img
-            class="main_section3_lineimg_one focus-in-expand"
-            src="/public/icon/line.png"
-            alt="line"
-          />
-          <img
-            class="main_section3_lineimg_two focus-in-expand"
-            src="/public/icon/line.png"
-            alt="line"
-          />
+          class="main_section3_lineimg_one focus-in-expand"
+          src="/public/icon/line.png"
+          alt="line"
+        />
+        <img
+          class="main_section3_lineimg_two focus-in-expand"
+          src="/public/icon/line.png"
+          alt="line"
+        />
         <div class="main_section_wrap">
           <h1 class="main_section3_h1">Development Felid</h1>
 
@@ -133,15 +141,15 @@
 
       <section class="main_section4">
         <img
-            class="main_section4_lineimg_one focus-in-expand"
-            src="/public/icon/line.png"
-            alt="line"
-          />
-          <img
-            class="main_section4_lineimg_two focus-in-expand"
-            src="/public/icon/line.png"
-            alt="line"
-          />
+          class="main_section4_lineimg_one focus-in-expand"
+          src="/public/icon/line.png"
+          alt="line"
+        />
+        <img
+          class="main_section4_lineimg_two focus-in-expand"
+          src="/public/icon/line.png"
+          alt="line"
+        />
         <div class="main_section_wrap">
           <h1 class="main_section4_h1">Blockchain & 전력거래소</h1>
 
@@ -157,15 +165,12 @@
               </div>
             </div>
 
-            
-
             <div class="main_section4_viewmore">
               <span>view more</span>
               <span>
                 <img src="/public/icon/view.png" alt="moreImg" />
               </span>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -176,19 +181,19 @@
     </article>
 
     <footer class="footer">
-        <div>
-            <img src="/public/CNgrideLogo.png" alt="logo" /></div>
-      
+      <div>
+        <img src="/public/CNgrideLogo.png" alt="logo" />
+      </div>
 
-        <ul>
-          <li>상호명 : (주)씨앤그리드</li>
-          <li>주소 : 대전광역시 중구 계백로 1719 센트리아 오피스텔 1406호 </li>
-          <li>대표이사 : 박승영</li>
-          <li>사업자등록번호 : 868-81-00313</li>
-          <li>대표번호 : 070-8680-9897</li>
-        </ul>
+      <ul>
+        <li>상호명 : (주)씨앤그리드</li>
+        <li>주소 : 대전광역시 중구 계백로 1719 센트리아 오피스텔 1406호</li>
+        <li>대표이사 : 박승영</li>
+        <li>사업자등록번호 : 868-81-00313</li>
+        <li>대표번호 : 070-8680-9897</li>
+      </ul>
 
-        <p>copyright (c) (주)씨앤그리드(CnGride) All Rights ReseRved</p>
+      <p>copyright (c) (주)씨앤그리드(CnGride) All Rights ReseRved</p>
     </footer>
 
     <script src="/index.js"></script>
