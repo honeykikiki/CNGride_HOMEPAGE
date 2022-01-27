@@ -1,84 +1,129 @@
 "use strict";
-var _a, _b, _c, _d, _e;
-const $navbar_container = document.querySelector('.navbar_container');
-const $mainSectionTwoViewmore = document.querySelector('.main_section2_viewmore');
-const $sectionOne = (_a = document.querySelector('.main_section1')) === null || _a === void 0 ? void 0 : _a.scrollHeight;
-const $sectionTwo = (_b = document.querySelector('.main_section2')) === null || _b === void 0 ? void 0 : _b.scrollHeight;
-const $sectionThree = (_c = document.querySelector('.main_section3')) === null || _c === void 0 ? void 0 : _c.scrollHeight;
-const $sectionfour = (_d = document.querySelector('.main_section4')) === null || _d === void 0 ? void 0 : _d.scrollHeight;
-const $sectionFive = (_e = document.querySelector('.main_section5')) === null || _e === void 0 ? void 0 : _e.scrollHeight;
-// const $navBar = document.querySelector("#navBar") as HTMLDivElement;
+// const $navbar_container = document.querySelector(
+//   '.navbar_container',
+// ) as HTMLElement;
+const $ = (selector) => document.querySelector(selector);
+const addClass = (select, list) => { var _a; return (_a = $(select)) === null || _a === void 0 ? void 0 : _a.classList.add(list); };
+const removeClass = (select, list) => { var _a; return (_a = $(select)) === null || _a === void 0 ? void 0 : _a.classList.remove(list); };
 window.addEventListener('DOMContentLoaded', () => {
-    function viewMoreMove(select) {
-        select.addEventListener('mouseenter', () => {
-            if (select.classList[1] === 'slide-in-left') {
-                select.classList.remove('slide-in-left');
-            }
-            else {
-                select.classList.add('slide-in-left');
-            }
-        });
-    }
-    viewMoreMove($mainSectionTwoViewmore);
     function navBar() {
-        if (!$navbar_container) {
-            return;
-        }
         if (window.scrollY === 0) {
-            $navbar_container.classList.remove('navbar_container_shake');
+            addClass('.navbar_container', 'navbar_container_shake');
         }
         else {
-            $navbar_container.classList.add('navbar_container_shake');
+            removeClass('.navbar_container', 'navbar_container_shake');
         }
     }
     navBar();
+    addClass('.main_section1_h1', 'text-focus-in');
+    addClass('.main_section_lineimg', 'focus-in-expand');
     document.addEventListener('scroll', navBar);
 });
-// window.addEventListener('mousewheel', scrollTopMove);
-document
-    .querySelector('article')
-    .childNodes.forEach((v) => v.addEventListener('mousewheel', scrollTopMove));
-let scrollTop = 0;
-function scrollTopMove(e) {
-    let windowHeight = window.innerHeight; // 스크린 창
-    if (!e.deltaY) {
-        return;
-    }
-    if (e.deltaY > 0 && scrollTop < 5) {
-        scrollTop = scrollTop + 1;
-    }
-    else if (e.deltaY < 0 && scrollTop > 0) {
-        scrollTop -= 1;
-    }
-    else {
-        return;
-    }
-    console.log(scrollTop);
-    if (scrollTop === 0) {
-        // select.classList.add('')
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    else if (scrollTop === 1) {
-        window.scrollTo({ top: windowHeight, behavior: 'smooth' });
-        // console.log(2);
-    }
-    else if (scrollTop === 2) {
-        window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
-        // console.log(3);
-    }
-    else if (scrollTop === 3) {
-        window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
-        // console.log(4);
-    }
-    else if (scrollTop === 4) {
-        window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
-        // console.log(4);
-    }
-    else {
-        console.log('??');
-        return;
-    }
+const viewMoreMove = (select) => {
+    var _a;
+    (_a = $(select)) === null || _a === void 0 ? void 0 : _a.addEventListener('mouseenter', () => {
+        var _a, _b, _c;
+        if (((_a = $(select)) === null || _a === void 0 ? void 0 : _a.classList[1]) === 'slide-in-left') {
+            (_b = $(select)) === null || _b === void 0 ? void 0 : _b.classList.remove('slide-in-left');
+        }
+        else {
+            (_c = $(select)) === null || _c === void 0 ? void 0 : _c.classList.add('slide-in-left');
+        }
+    });
+};
+viewMoreMove('.viewmore_span');
+const swiperOpction = {
+    direction: 'vertical',
+    slidesPerView: 0,
+    spaceBetween: 0,
+    speed: 500,
+    mousewheel: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        //반응형 조건 속성
+        1020: {
+            //640 이상일 경우
+            slidesPerView: 1,
+            touchRatio: 0, //드래그 금지
+        },
+    },
+    on: {
+        transitionEnd: function () {
+            if (Swiper.realIndex === 0) {
+                removeClass('.navbar_container', 'navbar_container_shake');
+                addClass('.main_section1_h1', 'text-focus-in');
+                addClass('.main_section_lineimg', 'focus-in-expand');
+            }
+            else {
+                removeClass('.main_section1_h1', 'text-focus-in');
+                removeClass('.main_section_lineimg', 'focus-in-expand');
+                addClass('.navbar_container', 'navbar_container_shake');
+            }
+            if (Swiper.realIndex === 1) {
+                addClass('.navbar_container', 'navbar_container_shake');
+            }
+            else {
+            }
+            if (Swiper.realIndex === 2) {
+            }
+            if (Swiper.realIndex === 3) {
+            }
+            if (Swiper.realIndex === 4) {
+            }
+        },
+    },
+};
+if (window.innerWidth > 768) {
+    var Swiper = new Swiper('.mySwiper', swiperOpction);
+    Swiper.slideTo(1, 0);
 }
+// window.addEventListener('wheel', function (event) {
+//   if (event.deltaY < 0) {
+//     Swiper.mousewheel.enable();
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   } else if (event.deltaY > 0) {
+//   }
+// });
+// window.addEventListener('mousewheel', scrollMove);
+// document
+//   .querySelector('article')!
+//   .childNodes.forEach((v) => v.addEventListener('mousewheel', scrollMove));
+// let scrollTop: number = 0;
+// function scrollMove(e: WheelEventInit) {
+//   let windowHeight = window.innerHeight; // 스크린 창
+//   let nowScrollTop = window.scrollY;
+//   if (!e.deltaY) {
+//     return;
+//   }
+//   if (e.deltaY > 0 && scrollTop < 4) {
+//     scrollTop = scrollTop + 1;
+//   } else if (e.deltaY < 0 && scrollTop > 0) {
+//     scrollTop -= 1;
+//   } else {
+//     return;
+//   }
+//   console.log(scrollTop, 'scrollTop');
+//   console.log(nowScrollTop, 'nowScrollTop');
+//   console.log(windowHeight, 'windowHeight');
+//   if (scrollTop === 0) {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   } else if (scrollTop === 1 && 0 <= nowScrollTop) {
+//     window.scrollTo({ top: windowHeight, behavior: 'smooth' });
+//     console.log(2);
+//   } else if (scrollTop === 2 && windowHeight * 1 <= nowScrollTop) {
+//     window.scrollTo({ top: windowHeight * 2, behavior: 'smooth' });
+//     console.log(3);
+//   } else if (scrollTop === 3 && windowHeight * 2 <= nowScrollTop) {
+//     window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
+//     console.log(4);
+//   } else if (scrollTop === 4 && windowHeight * 3 <= nowScrollTop) {
+//     window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
+//     console.log(4);
+//   }
+// }
 // if (
 //   window.scrollY < window.innerHeight &&
 //   window.scrollY >= window.innerHeight / 2

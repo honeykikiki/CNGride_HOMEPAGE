@@ -73,7 +73,7 @@ body {
 
 .main_article_wrap {
   overflow: hidden;
-  & > section {
+  & section {
     width: 100vw;
     height: calc(100vh);
     background-size: cover;
@@ -83,6 +83,7 @@ body {
     & h1 {
       color: #fff;
       font-size: 4rem;
+      margin-top: 4rem;
     }
     & .main_section_wrap {
       width: 100%;
@@ -94,72 +95,149 @@ body {
     }
   }
 
-  & .main_section1 {
-    background-image: url('/public/main_background_img/setction1.png');
+  & .swiper-wrapper {
+    & .main_section1 {
+      background-image: url('/public/main_background_img/setction1.png');
 
-    & .main_section1_h1 {
-      position: absolute;
-      left: 0;
-      bottom: 20rem;
+      & .main_section1_h1 {
+        position: absolute;
+        left: 0;
+        bottom: 20rem;
+        text-align: left;
+      }
+
+      & .main_section_lineimg {
+        position: absolute;
+        left: 0;
+        bottom: 13rem;
+      }
+
+      & .main_section1_scroll {
+        font-size: 1.4rem;
+        position: absolute;
+        right: 0;
+        bottom: 8rem;
+        color: #fff;
+        transform: rotate(90deg);
+      }
+      & .main_section1_scroll::after {
+        display: block;
+        content: '';
+        clear: both;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        border-bottom: 1px solid #fff;
+        animation: line-ani 2.6s 2s infinite
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
     }
 
-    & .main_section_lineimg {
-      position: absolute;
-      left: 0;
-      bottom: 13rem;
-    }
+    & .main_section2 {
+      background-image: url('/public/main_background_img/setction2.png');
 
-    & .main_section1_scroll {
-      font-size: 1.4rem;
-      position: absolute;
-      right: 0;
-      bottom: 8rem;
-      color: #fff;
-      transform: rotate(90deg);
-    }
-    & .main_section1_scroll::after {
-      display: block;
-      content: '';
-      clear: both;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      border-bottom: 1px solid #fff;
-      animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        both;
-    }
-  }
+      & .main_section2_h1 {
+        padding: 4rem;
+        text-align: center;
+      }
 
-  & .main_section2 {
-    background-image: url('/public/main_background_img/setction2.png');
+      & .main_section2_content {
+        display: flex;
+        width: 100%;
+        height: 80%;
+        align-items: center;
+        perspective: 1000px;
 
-    & .main_section2_h1 {
-      padding: 4rem;
-      text-align: center;
-    }
-
-    & .main_section2_content {
-      display: flex;
-      width: 100%;
-      height: 80%;
-      align-items: center;
-
-      & .main_section2_text {
-        overflow: hidden;
-        & p {
-          width: 80%;
-          font-size: 1.6rem;
-          color: #fff;
-          text-align: justify;
-          margin-right: 0;
-          margin-left: auto;
+        & .main_section2_img {
         }
-        & .main_section2_viewmore {
+
+        & .main_section2_text {
+          overflow: hidden;
+          & p {
+            width: 80%;
+            font-size: 1.6rem;
+            color: #fff;
+            text-align: justify;
+            margin-right: 0;
+            margin-left: auto;
+          }
+          & .main_section2_viewmore {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-top: 4rem;
+            text-align: right;
+            width: 100%;
+            overflow: hidden;
+            & div {
+              width: 173px;
+              margin-left: auto;
+              margin-right: 0;
+              overflow: hidden;
+            }
+            & span {
+              display: inline-block;
+              width: 100%;
+              cursor: pointer;
+              & img {
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .main_section3 {
+      background-image: url('/public/main_background_img/setction3.png');
+      & .main_section3_lineimg_one {
+        position: absolute;
+        left: 10rem;
+        bottom: 10rem;
+      }
+      & .main_section3_lineimg_two {
+        position: absolute;
+        right: 10rem;
+        top: 10rem;
+      }
+      & .main_section3_h1 {
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      & .main_section3_content {
+        margin-top: 4rem;
+        & .main_section3_icon {
+          display: flex;
+          justify-content: center;
+          & div {
+            margin-right: 6rem;
+            margin-left: 6rem;
+            text-align: center;
+            & img {
+              width: 14rem;
+            }
+            & p {
+              color: #fff;
+              font-size: 1.4rem;
+              margin-top: 4rem;
+            }
+          }
+        }
+        & .main_section3_text {
+          text-align: center;
+          margin-top: 4rem;
+          p {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-top: 0.5rem;
+          }
+        }
+        & .main_section3_viewmore {
           font-size: 1.8rem;
           color: #fff;
           margin-top: 4rem;
-          text-align: right;
+          text-align: center;
           cursor: pointer;
           & span {
             overflow: hidden;
@@ -171,138 +249,79 @@ body {
         }
       }
     }
-  }
 
-  & .main_section3 {
-    background-image: url('/public/main_background_img/setction3.png');
-    & .main_section3_lineimg_one {
-      position: absolute;
-      left: 10rem;
-      bottom: 10rem;
-    }
-    & .main_section3_lineimg_two {
-      position: absolute;
-      right: 10rem;
-      top: 10rem;
-    }
-    & .main_section3_h1 {
-      padding: 4rem 0;
-      text-align: center;
-    }
+    & .main_section4 {
+      background-image: url('/public/main_background_img/setction4.png');
+      & .main_section4_lineimg_one {
+        position: absolute;
+        left: 70%;
+        bottom: 40%;
+      }
+      & .main_section4_lineimg_two {
+        position: absolute;
+        left: 45%;
+        top: 5%;
+        transform: translateX(-50%);
+      }
+      & .main_section4_h1 {
+        padding: 4rem 0;
+        text-align: center;
+      }
 
-    & .main_section3_content {
-      margin-top: 4rem;
-      & .main_section3_icon {
-        display: flex;
-        justify-content: center;
-        & div {
-          margin-right: 6rem;
-          margin-left: 6rem;
-          text-align: center;
-          & img {
-            width: 14rem;
-          }
-          & p {
-            color: #fff;
-            font-size: 1.4rem;
-            margin-top: 4rem;
+      & .main_section4_content {
+        margin-top: 4rem;
+        & .main_section4_icon {
+          display: flex;
+          justify-content: center;
+          & div {
+            margin-right: 6rem;
+            margin-left: 6rem;
+            text-align: center;
+            & img {
+              width: 14rem;
+            }
+            & p {
+              color: #fff;
+              font-size: 1.4rem;
+              margin-top: 4rem;
+            }
           }
         }
-      }
-      & .main_section3_text {
-        text-align: center;
-        margin-top: 4rem;
-        p {
-          color: #fff;
+
+        & .main_section4_viewmore {
           font-size: 1.8rem;
-          margin-top: 0.5rem;
-        }
-      }
-      & .main_section3_viewmore {
-        font-size: 1.8rem;
-        color: #fff;
-        margin-top: 4rem;
-        text-align: center;
-        cursor: pointer;
-        & span {
-          overflow: hidden;
-          width: 100px;
-        }
-        & img {
-          width: 50px;
-        }
-      }
-    }
-  }
-
-  & .main_section4 {
-    background-image: url('/public/main_background_img/setction4.png');
-    & .main_section4_lineimg_one {
-      position: absolute;
-      left: 70%;
-      bottom: 40%;
-    }
-    & .main_section4_lineimg_two {
-      position: absolute;
-      left: 45%;
-      top: 0;
-      transform: translateX(-50%);
-    }
-    & .main_section4_h1 {
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    & .main_section4_content {
-      margin-top: 4rem;
-      & .main_section4_icon {
-        display: flex;
-        justify-content: center;
-        & div {
-          margin-right: 6rem;
-          margin-left: 6rem;
+          color: #fff;
+          margin-top: 4rem;
           text-align: center;
+          cursor: pointer;
+          & span {
+            overflow: hidden;
+            width: 100px;
+          }
           & img {
-            width: 14rem;
+            width: 50px;
           }
-          & p {
-            color: #fff;
-            font-size: 1.4rem;
-            margin-top: 4rem;
-          }
-        }
-      }
-
-      & .main_section4_viewmore {
-        font-size: 1.8rem;
-        color: #fff;
-        margin-top: 4rem;
-        text-align: center;
-        cursor: pointer;
-        & span {
-          overflow: hidden;
-          width: 100px;
-        }
-        & img {
-          width: 50px;
         }
       }
     }
-  }
-  & .main_section5 {
-    background-image: url('/public/main_background_img/setction5.png');
+    & .main_section5 {
+      background-image: url('/public/main_background_img/setction5.png');
+    }
   }
 }
 
 .footer {
   text-align: center;
-  padding: 1rem;
+  // padding: 1rem;
   background-color: #bcbcbc;
+  display: flex;
+  flex-direction: column;
   & img {
     width: 15rem;
   }
   & ul {
     color: #000;
+
     & li {
       margin-top: 1rem;
     }
