@@ -14,7 +14,7 @@ body {
 
 #NavBar {
   & .navbar_container_shake {
-    padding: 0.5rem;
+    padding: 0.8rem;
     transition: all 0.5s;
   }
 }
@@ -150,9 +150,11 @@ body {
         perspective: 1000px;
 
         & .main_section2_img {
+          transform: translateY(900px);
         }
 
         & .main_section2_text {
+          opacity: 0;
           overflow: hidden;
           & p {
             width: 80%;
@@ -208,6 +210,7 @@ body {
       & .main_section3_content {
         margin-top: 4rem;
         & .main_section3_icon {
+          opacity: 0;
           display: flex;
           justify-content: center;
           & div {
@@ -225,6 +228,7 @@ body {
           }
         }
         & .main_section3_text {
+          opacity: 0;
           text-align: center;
           margin-top: 4rem;
           p {
@@ -233,18 +237,26 @@ body {
             margin-top: 0.5rem;
           }
         }
+
         & .main_section3_viewmore {
           font-size: 1.8rem;
           color: #fff;
           margin-top: 4rem;
           text-align: center;
-          cursor: pointer;
-          & span {
+          width: 100%;
+          overflow: hidden;
+          & div {
+            width: 173px;
+            margin: auto;
             overflow: hidden;
-            width: 100px;
           }
-          & img {
-            width: 50px;
+          & span {
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+            & img {
+              width: 50px;
+            }
           }
         }
       }
@@ -293,13 +305,20 @@ body {
           color: #fff;
           margin-top: 4rem;
           text-align: center;
-          cursor: pointer;
-          & span {
+          width: 100%;
+          overflow: hidden;
+          & div {
+            width: 173px;
+            margin: auto;
             overflow: hidden;
-            width: 100px;
           }
-          & img {
-            width: 50px;
+          & span {
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+            & img {
+              width: 50px;
+            }
           }
         }
       }
@@ -333,6 +352,8 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .main_article_wrap {
+  }
 }
 
 @media (max-width: 768px) {

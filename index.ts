@@ -34,7 +34,7 @@ const viewMoreMove = (select: string) => {
     }
   });
 };
-viewMoreMove('.viewmore_span');
+viewMoreMove('.main_section2_viewmore_span');
 
 const swiperOpction = {
   direction: 'vertical',
@@ -47,14 +47,13 @@ const swiperOpction = {
     el: '.swiper-pagination',
     clickable: true,
   },
-  breakpoints: {
-    //반응형 조건 속성
-    1020: {
-      //640 이상일 경우
-      slidesPerView: 1, //레이아웃 2열
-      touchRatio: 0, //드래그 금지
-    },
-  },
+  // breakpoints: {
+  //   //반응형 조건 속성
+  //   1020: {
+  //     //640 이상일 경우
+  //     slidesPerView: 1, //레이아웃 2열
+  //   },
+  // },
   on: {
     transitionEnd: function () {
       if (Swiper.realIndex === 0) {
@@ -62,17 +61,28 @@ const swiperOpction = {
         addClass('.main_section1_h1', 'text-focus-in');
         addClass('.main_section_lineimg', 'focus-in-expand');
       } else {
-        removeClass('.main_section1_h1', 'text-focus-in');
-        removeClass('.main_section_lineimg', 'focus-in-expand');
+        // removeClass('.main_section1_h1', 'text-focus-in');
+        // removeClass('.main_section_lineimg', 'focus-in-expand');
         addClass('.navbar_container', 'navbar_container_shake');
       }
+
       if (Swiper.realIndex === 1) {
-        addClass('.navbar_container', 'navbar_container_shake');
+        addClass('.main_section2_img', 'flip-in-hor-top');
+        addClass('.main_section2_text', 'text-focus-in-left');
       } else {
+        // removeClass('.main_section2_img', 'flip-in-hor-top');
+        // removeClass('.main_section2_text', 'text-focus-in-left');
       }
+
       if (Swiper.realIndex === 2) {
+        addClass('.main_section3_icon', 'flip-in-hor-top');
+        addClass('.main_section3_text', 'text-focus-in-left');
+        viewMoreMove('.main_section3_viewmore_span');
       }
       if (Swiper.realIndex === 3) {
+        addClass('.main_section4_icon', 'flip-in-hor-top');
+
+        viewMoreMove('.main_section4_viewmore_span');
       }
       if (Swiper.realIndex === 4) {
       }
@@ -80,10 +90,10 @@ const swiperOpction = {
   },
 };
 
-if (window.innerWidth > 768) {
-  var Swiper: any = new Swiper('.mySwiper', swiperOpction);
-  Swiper.slideTo(1, 0);
+if (window.innerWidth > 1020) {
 }
+var Swiper: any = new Swiper('.mySwiper', swiperOpction);
+Swiper.slideTo(0, 0);
 
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
