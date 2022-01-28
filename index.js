@@ -34,7 +34,7 @@ const viewMoreMove = (select) => {
 viewMoreMove('.main_section2_viewmore_span');
 const swiperOpction = {
     direction: 'vertical',
-    slidesPerView: 0,
+    slidesPerView: 1,
     spaceBetween: 0,
     speed: 500,
     mousewheel: true,
@@ -42,13 +42,13 @@ const swiperOpction = {
         el: '.swiper-pagination',
         clickable: true,
     },
-    // breakpoints: {
-    //   //반응형 조건 속성
-    //   1020: {
-    //     //640 이상일 경우
-    //     slidesPerView: 1, //레이아웃 2열
-    //   },
-    // },
+    breakpoints: {
+        //반응형 조건 속성
+        1020: {
+            //640 이상일 경우
+            slidesPerView: 1, //레이아웃 2열
+        },
+    },
     on: {
         transitionEnd: function () {
             if (Swiper.realIndex === 0) {
@@ -62,6 +62,7 @@ const swiperOpction = {
                 addClass('.navbar_container', 'navbar_container_shake');
             }
             if (Swiper.realIndex === 1) {
+                addClass('.main_section2_h1', 'text-focus-in');
                 addClass('.main_section2_img', 'flip-in-hor-top');
                 addClass('.main_section2_text', 'text-focus-in-left');
             }
@@ -70,12 +71,15 @@ const swiperOpction = {
                 // removeClass('.main_section2_text', 'text-focus-in-left');
             }
             if (Swiper.realIndex === 2) {
+                addClass('.main_section3_h1', 'text-focus-in');
                 addClass('.main_section3_icon', 'flip-in-hor-top');
                 addClass('.main_section3_text', 'text-focus-in-left');
                 viewMoreMove('.main_section3_viewmore_span');
             }
             if (Swiper.realIndex === 3) {
+                addClass('.main_section4_h1', 'text-focus-in');
                 addClass('.main_section4_icon', 'flip-in-hor-top');
+                addClass('.main_section4_viewmore_span', 'flip-in-hor-top');
                 viewMoreMove('.main_section4_viewmore_span');
             }
             if (Swiper.realIndex === 4) {
@@ -83,10 +87,8 @@ const swiperOpction = {
         },
     },
 };
-if (window.innerWidth > 1020) {
-}
 var Swiper = new Swiper('.mySwiper', swiperOpction);
-Swiper.slideTo(0, 0);
+Swiper.slideTo(3, 0);
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
 //     Swiper.mousewheel.enable();
