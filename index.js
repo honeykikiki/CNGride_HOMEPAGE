@@ -32,6 +32,15 @@ const viewMoreMove = (select) => {
     });
 };
 viewMoreMove('.main_section2_viewmore_span');
+$('.menu-bar-sm').style.opacity = '0';
+$('.menu-toggle').addEventListener('click', () => {
+    if ($('.menu-bar-sm').style.opacity === '0') {
+        $('.menu-bar-sm').style.opacity = '1';
+    }
+    else {
+        $('.menu-bar-sm').style.opacity = '0';
+    }
+});
 const swiperOpction = {
     direction: 'vertical',
     slidesPerView: 1,
@@ -88,7 +97,7 @@ const swiperOpction = {
     },
 };
 var Swiper = new Swiper('.mySwiper', swiperOpction);
-Swiper.slideTo(3, 0);
+// Swiper.slideTo(3, 0);
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
 //     Swiper.mousewheel.enable();

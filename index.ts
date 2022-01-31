@@ -1,7 +1,7 @@
 // const $navbar_container = document.querySelector(
 //   '.navbar_container',
 // ) as HTMLElement;
-const $ = (selector: string) => document.querySelector(selector);
+const $ = (selector: string) => document.querySelector(selector) as HTMLElement;
 
 const addClass = (select: string, list: string) =>
   $(select)?.classList.add(list);
@@ -35,6 +35,15 @@ const viewMoreMove = (select: string) => {
   });
 };
 viewMoreMove('.main_section2_viewmore_span');
+
+$('.menu-bar-sm').style.opacity = '0';
+$('.menu-toggle').addEventListener('click', () => {
+  if ($('.menu-bar-sm').style.opacity === '0') {
+    $('.menu-bar-sm').style.opacity = '1';
+  } else {
+    $('.menu-bar-sm').style.opacity = '0';
+  }
+});
 
 const swiperOpction = {
   direction: 'vertical',
@@ -95,7 +104,7 @@ const swiperOpction = {
 };
 
 var Swiper: any = new Swiper('.mySwiper', swiperOpction);
-Swiper.slideTo(3, 0);
+// Swiper.slideTo(3, 0);
 
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
