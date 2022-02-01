@@ -27,24 +27,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const viewMoreMove = (select: string) => {
   $(select)?.addEventListener('mouseenter', () => {
-    if ($(select)?.classList[1] === 'slide-in-left') {
+    console.log($(select)?.classList);
+    if (
+      $(select)?.classList[1] === 'slide-in-left' ||
+      $(select)?.classList[2] === 'slide-in-left'
+    ) {
       $(select)?.classList.remove('slide-in-left');
     } else {
       $(select)?.classList.add('slide-in-left');
     }
   });
 };
-viewMoreMove('.main_section2_viewmore_span');
 
-$('.menu-toggle').addEventListener('click', () => {
-  if ($('.menu-bar-sm').style.opacity === '1') {
-    $('.menu-bar-sm').style.display = 'none';
-    $('.menu-bar-sm').style.opacity = '0';
-  } else {
-    $('.menu-bar-sm').style.display = 'block';
-    $('.menu-bar-sm').style.opacity = '1';
-  }
-});
+// $('.menu-toggle').addEventListener('click', () => {
+//   if ($('.menu-bar-sm').style.opacity === '1') {
+//     $('.menu-bar-sm').style.display = 'none';
+//     $('.menu-bar-sm').style.opacity = '0';
+//   } else {
+//     $('.menu-bar-sm').style.display = 'block';
+//     $('.menu-bar-sm').style.opacity = '1';
+//   }
+// });
 
 const swiperOpction = {
   direction: 'vertical',
@@ -80,24 +83,20 @@ const swiperOpction = {
         addClass('.main_section2_h1', 'text-focus-in');
         addClass('.main_section2_img', 'flip-in-hor-top');
         addClass('.main_section2_text', 'text-focus-in-left');
-      } else {
-        // removeClass('.main_section2_img', 'flip-in-hor-top');
-        // removeClass('.main_section2_text', 'text-focus-in-left');
       }
 
       if (Swiper.realIndex === 2) {
         addClass('.main_section3_h1', 'text-focus-in');
         addClass('.main_section3_icon', 'flip-in-hor-top');
         addClass('.main_section3_text', 'text-focus-in-left');
-        viewMoreMove('.main_section3_viewmore_span');
       }
+
       if (Swiper.realIndex === 3) {
         addClass('.main_section4_h1', 'text-focus-in');
         addClass('.main_section4_icon', 'flip-in-hor-top');
         addClass('.main_section4_viewmore_span', 'flip-in-hor-top');
-
-        viewMoreMove('.main_section4_viewmore_span');
       }
+
       if (Swiper.realIndex === 4) {
       }
     },
@@ -105,6 +104,7 @@ const swiperOpction = {
 };
 
 var Swiper: any = new Swiper('.mySwiper', swiperOpction);
+
 // Swiper.slideTo(3, 0);
 
 // window.addEventListener('wheel', function (event) {
