@@ -15,51 +15,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <link
+      href="https://cdn.bootcss.com/Swiper/4.0.6/css/swiper.css"
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
+    <script src="https://cdn.bootcss.com/Swiper/4.0.6/js/swiper.js"></script>
 
     <link rel="stylesheet" href="/css/default.css" />
     <link rel="stylesheet" href="/css/index.css" />
-    <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-      .swiper-wrapper .swiper-pagination {
-        display: none;
-      }
-      .swiper-pagination span {
-        background-color: white;
-        width: 10px;
-        height: 10px;
-      }
-    </style>
   </head>
   <body>
     <nav id="NavBar" class="navbar">
@@ -243,11 +208,21 @@
         </section>
 
         <section class="main_section5 swiper-slide">
-          <div class="main_section_wrap"></div>
+          <div class="main_section_wrap">
+            <div class="main_section5_mapbox">
+              <div class="mapbox"></div>
+              <div class="samllbox_wrap">
+                <div class="samllbox sm_box1"></div>
+                <div class="samllbox sm_box2"></div>
+                <div class="samllbox sm_box3"></div>
+                <div class="samllbox sm_box4"></div>
+              </div>
+            </div>
+          </div>
         </section>
         <div class="swiper-pagination"></div>
 
-        <footer class="footer swiper-slide">
+        <div class="swiper-slide footer">
           <div>
             <img src="/public/CNgrideLogo.png" alt="logo" />
           </div>
@@ -271,13 +246,12 @@
           </ul>
 
           <p>copyright (c) (주)씨앤그리드(CnGride) All Rights ReseRved</p>
-        </footer>
+        </div>
       </div>
 
       <div class="swiper-pagination"></div>
     </article>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/index.js"></script>
   </body>
 </html>

@@ -139,33 +139,33 @@
 
 @-webkit-keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
     opacity: 0;
   }
   100% {
     -webkit-filter: blur(0px);
-    filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
 }
 
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
     opacity: 0;
   }
   100% {
     -webkit-filter: blur(0px);
-    filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
 }
 
 .text-focus-in {
-  -webkit-animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s both;
-          animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s both;
+  -webkit-animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s both;
+          animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s both;
 }
 
 @-webkit-keyframes text-focus-in-left {
@@ -203,8 +203,8 @@
 }
 
 .text-focus-in-left {
-  -webkit-animation: text-focus-in-left 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-          animation: text-focus-in-left 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: text-focus-in-left 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.4s both;
+          animation: text-focus-in-left 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.4s both;
 }
 
 @-webkit-keyframes flip-in-hor-top {
@@ -236,6 +236,43 @@ html {
 
 body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-wrapper .swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination span {
+  background-color: white;
+  width: 10px;
+  height: 10px;
 }
 
 #NavBar .navbar_container_shake {
@@ -321,8 +358,6 @@ body {
 }
 
 .main_article_wrap section {
-  width: 100vw;
-  height: calc(100vh);
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -341,6 +376,7 @@ body {
   height: 100%;
   max-width: 1200px;
   margin: auto;
+  margin-top: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -418,7 +454,7 @@ body {
 
 .main_article_wrap .swiper-wrapper .main_section2 .main_section2_content .main_section2_text p {
   width: 80%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #fff;
   text-align: justify;
   margin-right: 0;
@@ -598,7 +634,7 @@ body {
 
 .main_article_wrap .swiper-wrapper .main_section4 .main_section4_content .main_section4_icon div p {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-top: 4rem;
 }
 
@@ -632,7 +668,39 @@ body {
   background-image: url("/public/main_background_img/setction5.png");
 }
 
+.main_article_wrap .swiper-wrapper .main_section5 .main_section_wrap .main_section5_mapbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main_article_wrap .swiper-wrapper .main_section5 .main_section_wrap .main_section5_mapbox .mapbox {
+  width: 100%;
+  height: 70%;
+}
+
+.main_article_wrap .swiper-wrapper .main_section5 .main_section_wrap .main_section5_mapbox .samllbox_wrap {
+  width: 100%;
+  height: 30%;
+  background-color: #595959;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_article_wrap .swiper-wrapper .main_section5 .main_section_wrap .main_section5_mapbox .samllbox_wrap div {
+  width: 25%;
+  height: 100%;
+  background-color: red;
+}
+
 .footer {
+  height: 300px;
   text-align: center;
   background-color: #bcbcbc;
   display: -webkit-box;
@@ -657,12 +725,96 @@ body {
 }
 
 .footer p {
+  font-size: 1.4rem;
   margin-top: 1rem;
-  color: #797979;
+  color: #595959;
 }
 
-.company_wrap {
+.company {
+  width: 100%;
   margin-top: 6rem;
+}
+
+.company h1 {
+  font-size: 4.8rem;
+  color: #181818;
+  text-align: center;
+}
+
+.company p {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #181818;
+}
+
+.company .company_title_box {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.company .company_title_box h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+}
+
+.company .company_title_box img {
+  width: 100%;
+  height: 400px;
+}
+
+.company .company_wrap {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.company .company_wrap .company_text_box h1 {
+  margin-top: 200px;
+}
+
+.company .company_wrap .company_text_box p {
+  margin-top: 40px;
+}
+
+.company .company_wrap .company_text_box p:nth-child(3) {
+  margin-top: 80px;
+}
+
+.company .company_wrap .company_icon_box .company_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.company .company_wrap .company_icon_box .company_icon p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: white;
+  margin-top: 20px;
+}
+
+.company .company_wrap .company_icon_box .company_icon img {
+  width: 13rem;
+}
+
+.company .company_wrap .company_icon_box .company_icon .company_icon1, .company .company_wrap .company_icon_box .company_icon .company_icon2, .company .company_wrap .company_icon_box .company_icon .company_icon3 {
+  width: 33.3333%;
+  background-color: black;
+  text-align: center;
+}
+
+.company .company_wrap .company_icon_box .company_icon .company_icon1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 1200px) {

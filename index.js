@@ -44,7 +44,7 @@ const viewMoreMove = (select) => {
 // });
 const swiperOpction = {
     direction: 'vertical',
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     speed: 500,
     mousewheel: true,
@@ -92,7 +92,7 @@ const swiperOpction = {
     },
 };
 var Swiper = new Swiper('.mySwiper', swiperOpction);
-// Swiper.slideTo(3, 0);
+Swiper.slideTo(4, 0);
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
 //     Swiper.mousewheel.enable();
