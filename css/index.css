@@ -768,53 +768,133 @@ body {
   height: 400px;
 }
 
-.company .company_wrap {
+.company .company_text_wrap {
   max-width: 1200px;
   margin: auto;
 }
 
-.company .company_wrap .company_text_box h1 {
+.company .company_text_wrap .company_text_box h1 {
   margin-top: 200px;
 }
 
-.company .company_wrap .company_text_box p {
+.company .company_text_wrap .company_text_box p {
   margin-top: 40px;
 }
 
-.company .company_wrap .company_text_box p:nth-child(3) {
+.company .company_text_wrap .company_text_box p:nth-child(3) {
   margin-top: 80px;
 }
 
-.company .company_wrap .company_icon_box .company_icon {
+.company .company_icon_wrap {
+  background-image: url(/public/company/company-icon.png);
+  width: 100%;
+  height: 60rem;
+  margin-top: 10rem;
+}
+
+.company .company_icon_wrap .company_icon_box {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+.company .company_icon_wrap .company_icon_box .company_icon {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.company .company_wrap .company_icon_box .company_icon p {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: white;
-  margin-top: 20px;
-}
-
-.company .company_wrap .company_icon_box .company_icon img {
-  width: 13rem;
-}
-
-.company .company_wrap .company_icon_box .company_icon .company_icon1, .company .company_wrap .company_icon_box .company_icon .company_icon2, .company .company_wrap .company_icon_box .company_icon .company_icon3 {
-  width: 33.3333%;
-  background-color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
-.company .company_wrap .company_icon_box .company_icon .company_icon1 {
+.company .company_icon_wrap .company_icon_box .company_icon .company_icon1_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.company .company_icon_wrap .company_icon_box .company_icon p {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 4rem;
+}
+
+.company .company_icon_wrap .company_icon_box .company_icon img {
+  width: 13rem;
+}
+
+.company .company_icon_wrap .company_icon_box .company_icon span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: white;
+}
+
+.company .company_icon_wrap .company_icon_box .company_icon ul {
+  margin-top: 8rem;
+}
+
+.company .company_map_box {
+  max-width: 1200px;
+  height: 70rem;
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  background-color: #f8f7f5;
+  overflow: hidden;
+}
+
+.company .company_map_box .mapbox {
+  width: 100%;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.company .company_map_box .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 25%;
+  background-color: F8F7F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.company .company_map_box .content p {
+  font-size: 3.8rem;
+}
+
+.company .company_map_box .text {
+  border-left: 1px solid #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.company .company_map_box .text p {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1200px) {
