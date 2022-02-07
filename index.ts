@@ -11,7 +11,7 @@ const removeClass = (select: string, list: string) =>
 
 window.addEventListener('DOMContentLoaded', () => {
   function navBar() {
-    if (window.scrollY === 0) {
+    if (window.scrollY > 0) {
       addClass('.navbar_container', 'navbar_container_shake');
     } else {
       removeClass('.navbar_container', 'navbar_container_shake');
@@ -39,15 +39,15 @@ const viewMoreMove = (select: string) => {
   });
 };
 
-// $('.menu-toggle').addEventListener('click', () => {
-//   if ($('.menu-bar-sm').style.opacity === '1') {
-//     $('.menu-bar-sm').style.display = 'none';
-//     $('.menu-bar-sm').style.opacity = '0';
-//   } else {
-//     $('.menu-bar-sm').style.display = 'block';
-//     $('.menu-bar-sm').style.opacity = '1';
-//   }
-// });
+$('.menu-toggle').addEventListener('click', () => {
+  if ($('.menu-bar-sm').style.opacity === '1') {
+    $('.menu-bar-sm').style.display = 'none';
+    $('.menu-bar-sm').style.opacity = '0';
+  } else {
+    $('.menu-bar-sm').style.display = 'block';
+    $('.menu-bar-sm').style.opacity = '1';
+  }
+});
 
 const swiperOpction = {
   direction: 'vertical',
@@ -105,7 +105,7 @@ const swiperOpction = {
 
 var Swiper: any = new Swiper('.mySwiper', swiperOpction);
 
-Swiper.slideTo(4, 0);
+// Swiper.slideTo(0, 0);
 
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {

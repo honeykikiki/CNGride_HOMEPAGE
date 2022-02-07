@@ -7,7 +7,7 @@ const addClass = (select, list) => { var _a; return (_a = $(select)) === null ||
 const removeClass = (select, list) => { var _a; return (_a = $(select)) === null || _a === void 0 ? void 0 : _a.classList.remove(list); };
 window.addEventListener('DOMContentLoaded', () => {
     function navBar() {
-        if (window.scrollY === 0) {
+        if (window.scrollY > 0) {
             addClass('.navbar_container', 'navbar_container_shake');
         }
         else {
@@ -33,15 +33,16 @@ const viewMoreMove = (select) => {
         }
     });
 };
-// $('.menu-toggle').addEventListener('click', () => {
-//   if ($('.menu-bar-sm').style.opacity === '1') {
-//     $('.menu-bar-sm').style.display = 'none';
-//     $('.menu-bar-sm').style.opacity = '0';
-//   } else {
-//     $('.menu-bar-sm').style.display = 'block';
-//     $('.menu-bar-sm').style.opacity = '1';
-//   }
-// });
+$('.menu-toggle').addEventListener('click', () => {
+    if ($('.menu-bar-sm').style.opacity === '1') {
+        $('.menu-bar-sm').style.display = 'none';
+        $('.menu-bar-sm').style.opacity = '0';
+    }
+    else {
+        $('.menu-bar-sm').style.display = 'block';
+        $('.menu-bar-sm').style.opacity = '1';
+    }
+});
 const swiperOpction = {
     direction: 'vertical',
     slidesPerView: 'auto',
@@ -92,7 +93,7 @@ const swiperOpction = {
     },
 };
 var Swiper = new Swiper('.mySwiper', swiperOpction);
-Swiper.slideTo(4, 0);
+// Swiper.slideTo(0, 0);
 // window.addEventListener('wheel', function (event) {
 //   if (event.deltaY < 0) {
 //     Swiper.mousewheel.enable();
