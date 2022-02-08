@@ -244,10 +244,6 @@ body {
   height: 100%;
 }
 
-a {
-  color: #fff;
-}
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -339,6 +335,10 @@ a {
   position: relative;
 }
 
+.navbar .navbar_container .navbar_main_menu > ul .navbar_list a {
+  color: #181818;
+}
+
 .navbar .navbar_container .navbar_main_menu > ul .navbar_list::after {
   display: block;
   content: '';
@@ -383,6 +383,10 @@ a {
   margin-top: 3rem;
   position: relative;
   overflow: hidden;
+}
+
+.main_article_wrap .swiper-wrapper a {
+  color: #fff;
 }
 
 .main_article_wrap .swiper-wrapper .main_section1 {
@@ -746,12 +750,6 @@ a {
   text-align: center;
 }
 
-.company p {
-  font-size: 2.8rem;
-  text-align: center;
-  color: #181818;
-}
-
 .company .company_title_box {
   width: 100%;
   position: relative;
@@ -773,24 +771,72 @@ a {
   height: 40rem;
 }
 
-.company .company_text_wrap {
+.company .company_title_box .company_navbox {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -2.5rem;
+}
+
+.company .company_title_box .company_navbox ul {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.35);
+          box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.company .company_title_box .company_navbox ul li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  line-height: 10rem;
+  cursor: pointer;
+}
+
+.company .company_title_box .company_navbox ul li p {
+  font-size: 2.6rem;
+}
+
+.company .company_title_box .company_navbox ul li:nth-child(1) {
+  border-bottom: 10px solid #0077a7;
+}
+
+.company .company_introduction {
+  display: none;
+}
+
+.company .company_introduction .company_text_wrap {
   max-width: 1200px;
   margin: auto;
 }
 
-.company .company_text_wrap .company_text_box h1 {
+.company .company_introduction .company_text_wrap p {
+  font-size: 2.8rem;
+  color: #181818;
+}
+
+.company .company_introduction .company_text_wrap .company_text_box h1 {
   margin-top: 20rem;
 }
 
-.company .company_text_wrap .company_text_box p {
+.company .company_introduction .company_text_wrap .company_text_box p {
   margin-top: 4rem;
+  text-align: center;
 }
 
-.company .company_text_wrap .company_text_box p:nth-child(3) {
+.company .company_introduction .company_text_wrap .company_text_box p:nth-child(3) {
   margin-top: 8rem;
+  text-align: left;
 }
 
-.company .company_icon_wrap {
+.company .company_introduction .company_icon_wrap {
   background-image: url(/public/company/company-icon.png);
   background-position: center;
   background-size: cover;
@@ -799,13 +845,13 @@ a {
   margin-top: 10rem;
 }
 
-.company .company_icon_wrap .company_icon_box {
+.company .company_introduction .company_icon_wrap .company_icon_box {
   max-width: 1200px;
   height: 100%;
   margin: auto;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -819,7 +865,7 @@ a {
   text-align: center;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon .company_icon1_box {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon .company_icon1_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,31 +873,31 @@ a {
       justify-content: space-around;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon p {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon p {
   font-size: 1.8rem;
   color: white;
   margin-top: 4rem;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon img {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon img {
   width: 13rem;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon span {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon span {
   font-size: 1.8rem;
   font-weight: 300;
   color: white;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon ul {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon ul {
   margin-top: 8rem;
 }
 
-.company .company_icon_wrap .company_icon_box .company_icon1, .company .company_icon_wrap .company_icon_box .company_icon2, .company .company_icon_wrap .company_icon_box .company_icon3 {
+.company .company_introduction .company_icon_wrap .company_icon_box .company_icon1, .company .company_introduction .company_icon_wrap .company_icon_box .company_icon2, .company .company_introduction .company_icon_wrap .company_icon_box .company_icon3 {
   width: 33.3333%;
 }
 
-.company .company_map_box {
+.company .company_introduction .company_map_box {
   max-width: 1200px;
   height: 70rem;
   margin: auto;
@@ -861,13 +907,13 @@ a {
   overflow: hidden;
 }
 
-.company .company_map_box .mapbox {
+.company .company_introduction .company_map_box .mapbox {
   width: 100%;
   height: 75%;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.company .company_map_box .content {
+.company .company_introduction .company_map_box .content {
   float: left;
   clear: both;
   content: '';
@@ -885,11 +931,11 @@ a {
           align-items: center;
 }
 
-.company .company_map_box .content > p {
+.company .company_introduction .company_map_box .content > p {
   font-size: 3.8rem;
 }
 
-.company .company_map_box .text {
+.company .company_introduction .company_map_box .text {
   border-left: 1px solid #181818;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -906,10 +952,34 @@ a {
           align-items: center;
 }
 
-.company .company_map_box .text p {
+.company .company_introduction .company_map_box .text p {
   font-size: 1.8rem;
   text-align: left;
   margin: 1rem;
+}
+
+.company .company_history .company_text_wrap {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.company .company_history .company_text_wrap p {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #181818;
+}
+
+.company .company_history .company_text_wrap .company_text_box h1 {
+  margin-top: 20rem;
+}
+
+.company .company_history .company_text_wrap .company_text_box p {
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.company .company_history .company_history_line {
+  font-size: 2.8rem;
 }
 
 @media (max-width: 1200px) {
