@@ -19,6 +19,18 @@ window.addEventListener('DOMContentLoaded', () => {
     addClass('.main_section_lineimg', 'focus-in-expand');
     document.addEventListener('scroll', navBar);
 });
+// 메뉴바 리스트 하단 라인
+const navList = document.querySelectorAll('.navbar_list');
+navList.forEach((v) => {
+    v.addEventListener('click', (e) => {
+        const targer = e.target;
+        console.log(targer.classList[1]);
+        navList.forEach((v) => {
+            v.classList.remove('navbar_list_on');
+        });
+        targer.classList.add('navbar_list_on');
+    });
+});
 const viewMoreMove = (select) => {
     var _a;
     (_a = $(select)) === null || _a === void 0 ? void 0 : _a.addEventListener('mouseenter', () => {
@@ -93,73 +105,21 @@ const swiperOpction = {
     },
 };
 var Swiper = new Swiper('.mySwiper', swiperOpction);
-// Swiper.slideTo(0, 0);
-// window.addEventListener('wheel', function (event) {
-//   if (event.deltaY < 0) {
-//     Swiper.mousewheel.enable();
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   } else if (event.deltaY > 0) {
-//   }
-// });
-// window.addEventListener('mousewheel', scrollMove);
-// document
-//   .querySelector('article')!
-//   .childNodes.forEach((v) => v.addEventListener('mousewheel', scrollMove));
-// let scrollTop: number = 0;
-// function scrollMove(e: WheelEventInit) {
-//   let windowHeight = window.innerHeight; // 스크린 창
-//   let nowScrollTop = window.scrollY;
-//   if (!e.deltaY) {
-//     return;
-//   }
-//   if (e.deltaY > 0 && scrollTop < 4) {
-//     scrollTop = scrollTop + 1;
-//   } else if (e.deltaY < 0 && scrollTop > 0) {
-//     scrollTop -= 1;
-//   } else {
-//     return;
-//   }
-//   console.log(scrollTop, 'scrollTop');
-//   console.log(nowScrollTop, 'nowScrollTop');
-//   console.log(windowHeight, 'windowHeight');
-//   if (scrollTop === 0) {
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   } else if (scrollTop === 1 && 0 <= nowScrollTop) {
-//     window.scrollTo({ top: windowHeight, behavior: 'smooth' });
-//     console.log(2);
-//   } else if (scrollTop === 2 && windowHeight * 1 <= nowScrollTop) {
-//     window.scrollTo({ top: windowHeight * 2, behavior: 'smooth' });
-//     console.log(3);
-//   } else if (scrollTop === 3 && windowHeight * 2 <= nowScrollTop) {
-//     window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
-//     console.log(4);
-//   } else if (scrollTop === 4 && windowHeight * 3 <= nowScrollTop) {
-//     window.scrollTo({ top: windowHeight * scrollTop, behavior: 'smooth' });
-//     console.log(4);
-//   }
-// }
-// if (
-//   window.scrollY < window.innerHeight &&
-//   window.scrollY >= window.innerHeight / 2
-// ) {
-//   // select.classList.add('')
-//   window.scrollTo({ top: $sectionOne, behavior: 'smooth' });
-// } else if (
-//   window.scrollY < window.innerHeight * 2 &&
-//   window.scrollY >= window.innerHeight
-// ) {
-//   // console.log(2);
-// } else if (
-//   window.scrollY < window.innerHeight * 3 &&
-//   window.scrollY >= window.innerHeight * 2
-// ) {
-//   // console.log(3);
-// } else if (
-//   window.scrollY < window.innerHeight * 4 &&
-//   window.scrollY >= window.innerHeight * 3
-// ) {
-//   // console.log(4);
-// } else {
-//   console.log('??');
-//   return;
-// }
+// Swiper.slideTo(2, 0);
+$('.company_navbox').addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.dataset.list === 'introduction') {
+        removeClass('.company_title_history', 'border_line');
+        addClass('.company_title_introduction', 'border_line');
+        $('.company_introduction').style.display = 'block';
+        $('.company_history').style.display = 'none';
+        return;
+    }
+    if (target.dataset.list === 'history') {
+        addClass('.company_title_history', 'border_line');
+        removeClass('.company_title_introduction', 'border_line');
+        $('.company_introduction').style.display = 'none';
+        $('.company_history').style.display = 'block';
+        return;
+    }
+});

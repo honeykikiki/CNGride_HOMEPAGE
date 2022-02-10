@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>company</title>
-
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -34,9 +34,12 @@
 
         <div class="navbar_main_menu">
           <i class="fas fa-bars menu-toggle"></i>
+
           <ul class="menu-bar-sm">
             <li>
-              <a class="navbar_list" href="/company.html">Company</a>
+              <a class="navbar_list navbar_list_on" href="/company.html"
+                >Company</a
+              >
             </li>
             <li>
               <a class="navbar_list" href="#">ESS Solution</a>
@@ -62,11 +65,11 @@
           <img src="/public/company/company-img.png" alt="회사소개 이미지" />
           <div class="company_navbox">
             <ul>
-              <li>
-                <p>회사소개</p>
+              <li class="company_title_introduction border_line">
+                <p data-list="introduction">회사소개</p>
               </li>
-              <li>
-                <p>회사연혁</p>
+              <li class="company_title_history">
+                <p data-list="history">회사연혁</p>
               </li>
             </ul>
           </div>
@@ -95,8 +98,7 @@
                 <div class="company_icon1_box">
                   <div>
                     <img
-                      src="/public/icon/d
-                      <p>evelopment</p>.png"
+                      src="/public/icon/development.png"
                       alt="연구용역 아이콘"
                     />
                     <p>연구용역 사업</p>
@@ -104,8 +106,7 @@
 
                   <div>
                     <img
-                      src="/public/icon/E
-                      <p>SS</p>.png"
+                      src="/public/icon/ESS.png"
                       alt="ESS 소프트웨어 아이콘"
                     />
                     <p>ESS 소프트웨어 개발</p>
@@ -126,11 +127,7 @@
 
               <div class="company_icon2">
                 <div>
-                  <img
-                    src="/public/icon/S
-                  <p>l_Nl</p>.png"
-                    alt="sl/ni 아이콘"
-                  />
+                  <img src="/public/icon/Sl_Nl.png" alt="sl/ni 아이콘" />
                   <p>NI/SI 사업</p>
                 </div>
 
@@ -148,11 +145,7 @@
               </div>
               <div class="company_icon3">
                 <div>
-                  <img
-                    src="/public/icon/c
-                  <p>onsulting</p>.png"
-                    alt="컨설팅 아이콘"
-                  />
+                  <img src="/public/icon/consulting.png" alt="컨설팅 아이콘" />
                   <p>컨설팅 사업</p>
                 </div>
                 <ul>

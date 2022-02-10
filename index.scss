@@ -95,7 +95,18 @@ body {
           }
         }
 
-        & .navbar_list::after {
+        & .navbar_list_on::after {
+          display: block;
+          content: '';
+          position: absolute;
+          left: 0%;
+          bottom: -5px;
+          width: 100%;
+          height: 2px;
+          background-color: black;
+          transition: all 0.5s;
+        }
+        & .navbar_list::before {
           display: block;
           content: '';
           position: absolute;
@@ -106,7 +117,7 @@ body {
           background-color: black;
           transition: all 0.5s;
         }
-        & .navbar_list:hover::after {
+        & .navbar_list:hover::before {
           width: 100%;
           left: 0;
         }
@@ -271,8 +282,14 @@ body {
             margin-right: 6rem;
             margin-left: 6rem;
             text-align: center;
-            & img {
-              width: 14rem;
+            img {
+              width: 13rem;
+              border: 2px solid white;
+              transition: all 0.25s ease-in-out;
+              border-radius: 20px;
+            }
+            img:hover {
+              border-radius: 50%;
             }
             & p {
               color: #fff;
@@ -348,8 +365,14 @@ body {
             margin-right: 6rem;
             margin-left: 6rem;
             text-align: center;
-            & img {
-              width: 14rem;
+            img {
+              width: 13rem;
+              border: 2px solid white;
+              transition: all 0.25s ease-in-out;
+              border-radius: 20px;
+            }
+            img:hover {
+              border-radius: 50%;
             }
             & p {
               color: #fff;
@@ -484,21 +507,48 @@ body {
           width: 100%;
           height: 100%;
           line-height: 10rem;
+          position: relative;
           cursor: pointer;
+          transition: all 0.5s;
           p {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
+            color: #181818;
           }
         }
 
-        & li:nth-child(1) {
+        li p:hover {
+          color: #0077a7;
+        }
+
+        .border_line {
+          border-bottom: 0px solid #0077a7;
+          transition: all 0.45s;
+
+          p {
+            color: #0077a7;
+          }
+        }
+
+        .border_line:active {
           border-bottom: 10px solid #0077a7;
+        }
+        .border_line::after {
+          display: block;
+          content: '';
+          clear: both;
+          position: absolute;
+          width: 100%;
+          height: 10px;
+          right: 0;
+          bottom: 0;
+          transition: all 0.25s ease-in-out;
+          background-color: #0077a7;
         }
       }
     }
   }
 
   .company_introduction {
-    display: none;
     .company_text_wrap {
       max-width: 1200px;
       margin: auto;
@@ -551,6 +601,12 @@ body {
           }
           img {
             width: 13rem;
+            border: 2px solid white;
+            transition: all 0.25s ease-in-out;
+            border-radius: 20px;
+          }
+          img:hover {
+            border-radius: 50%;
           }
           span {
             font-size: 1.8rem;
@@ -615,6 +671,7 @@ body {
   }
 
   .company_history {
+    display: none;
     .company_text_wrap {
       max-width: 1200px;
       margin: auto;
@@ -645,12 +702,10 @@ body {
         height: 2400px;
 
         li {
-          border: 1px solid blue;
           min-height: 400px;
           height: 400px;
           display: flex;
           justify-content: flex-end;
-          margin-left: 8rem;
           .date {
             width: 10rem;
             height: 10rem;
@@ -665,7 +720,6 @@ body {
             z-index: 10;
           }
           .content_wrap {
-            background-color: red;
             width: 50%;
             height: 100%;
             display: flex;
@@ -676,6 +730,8 @@ body {
             display: flex;
             align-items: center;
             margin-top: 2rem;
+            justify-content: flex-start;
+            margin-left: 6rem;
             .icon {
               width: 8rem;
               height: 8rem;
@@ -705,6 +761,29 @@ body {
               text-align: right;
               margin-right: 20px;
             }
+          }
+        }
+
+        & li:nth-child(2) {
+          justify-content: flex-start;
+          .content {
+            justify-content: flex-end;
+            margin-right: 6rem;
+          }
+        }
+        & li:nth-child(4) {
+          justify-content: flex-start;
+          .content {
+            justify-content: flex-end;
+            margin-right: 6rem;
+          }
+        }
+        & li:nth-child(7) {
+          justify-content: center;
+          margin-top: 4rem;
+          .content {
+            justify-content: center;
+            margin-left: 0;
           }
         }
 
@@ -799,6 +878,7 @@ body {
             & div {
               & img {
                 width: 24rem;
+                border-radius: 50%;
               }
               & p {
                 color: #fff;
@@ -829,6 +909,7 @@ body {
             & div {
               & img {
                 width: 24rem;
+                border-radius: 50%;
               }
               & p {
                 font-size: 2.4rem;
@@ -858,53 +939,56 @@ body {
         height: 30rem;
       }
     }
-
-    .company_text_wrap {
-      width: calc(100% - 40px);
-      .company_text_box {
-        h1 {
-          margin-top: 10rem;
-        }
-        p {
-          margin-top: 4rem;
-        }
-        p:nth-child(3) {
-          margin-top: 8rem;
-        }
-      }
-    }
-
-    .company_icon_wrap {
-      height: 50rem;
-      margin-top: 10rem;
-      .company_icon_box {
+    .company_introduction {
+      .company_text_wrap {
         width: calc(100% - 40px);
-        .company_icon {
-          justify-content: space-between;
-          .company_icon1_box {
-            justify-content: space-between;
+        .company_text_box {
+          h1 {
+            margin-top: 10rem;
           }
           p {
-            font-size: 1.6rem;
-          }
-          img {
-            width: 12rem;
-          }
-          span {
-            font-size: 1.8rem;
-          }
-          ul {
             margin-top: 4rem;
+          }
+          p:nth-child(3) {
+            margin-top: 8rem;
           }
         }
       }
-    }
 
-    .company_map_box {
-      height: 70rem;
-      .text {
-        p {
-          font-size: 1.4rem;
+      .company_icon_wrap {
+        height: 50rem;
+        margin-top: 10rem;
+        .company_icon_box {
+          width: calc(100% - 40px);
+          .company_icon {
+            justify-content: space-between;
+
+            .company_icon1_box {
+              justify-content: space-around;
+            }
+            p {
+              font-size: 1.6rem;
+            }
+            img {
+              width: 12rem;
+              border-radius: 50%;
+            }
+            span {
+              font-size: 1.8rem;
+            }
+            ul {
+              margin-top: 4rem;
+            }
+          }
+        }
+      }
+
+      .company_map_box {
+        height: 70rem;
+        .text {
+          p {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -1099,56 +1183,58 @@ body {
       }
     }
 
-    .company_text_wrap {
-      width: calc(100% - 40px);
-      .company_text_box {
-        h1 {
-          font-size: 4rem;
-          margin-top: 10rem;
-        }
-        p {
-          font-size: 2.4rem;
-          margin-top: 4rem;
-        }
-        p:nth-child(3) {
-          margin-top: 8rem;
-        }
-      }
-    }
-
-    .company_icon_wrap {
-      height: 100rem;
-      margin-top: 10rem;
-      .company_icon_box {
+    .company_introduction {
+      .company_text_wrap {
         width: calc(100% - 40px);
-        max-width: 1200px;
-        height: 100%;
-        margin: auto;
-        .company_icon {
-          flex-direction: column;
-          justify-content: space-around;
-
-          .company_icon1_box {
-            display: flex;
-            justify-content: space-around;
+        .company_text_box {
+          h1 {
+            font-size: 4rem;
+            margin-top: 10rem;
           }
-
-          &1,
-          &2,
-          &3 {
-            width: calc(100% - 40px);
+          p {
+            font-size: 2.4rem;
+            margin-top: 4rem;
+          }
+          p:nth-child(3) {
+            margin-top: 8rem;
           }
         }
       }
-    }
 
-    .company_map_box {
-      .content {
-        display: none;
+      .company_icon_wrap {
+        height: 100rem;
+        margin-top: 10rem;
+        .company_icon_box {
+          width: calc(100% - 40px);
+          max-width: 1200px;
+          height: 100%;
+          margin: auto;
+          .company_icon {
+            flex-direction: column;
+            justify-content: space-around;
+
+            .company_icon1_box {
+              display: flex;
+              justify-content: space-around;
+            }
+
+            &1,
+            &2,
+            &3 {
+              width: calc(100% - 40px);
+            }
+          }
+        }
       }
-      .text {
-        width: 100%;
-        height: 25%;
+
+      .company_map_box {
+        .content {
+          display: none;
+        }
+        .text {
+          width: 100%;
+          height: 25%;
+        }
       }
     }
   }
