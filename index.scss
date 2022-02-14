@@ -813,10 +813,13 @@ body {
   h2 {
     font-size: 4.8rem;
     color: #0072a0;
-    margin-top: 200px;
+    padding-top: 20rem;
+    margin-bottom: 10rem;
   }
   p {
     font-size: 2.8rem;
+    color: #181818;
+    text-align: justify;
   }
 
   .ess_title_box {
@@ -828,7 +831,9 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         color: #fff;
-        font-size: 2.4rem;
+        font-size: 4.8rem;
+        width: 100%;
+        text-align: center;
       }
       img {
         width: 100%;
@@ -838,6 +843,158 @@ body {
   .ess_section_wrap {
     max-width: 1200px;
     margin: auto;
+
+    .ess_section1 {
+      padding-bottom: 20rem;
+
+      .textbox1 {
+        .content_box {
+          display: flex;
+          P {
+            margin-right: 8rem;
+            text-align: justify;
+          }
+          img {
+            width: 50rem;
+          }
+        }
+      }
+      .textbox2 {
+        .content_box {
+          margin-top: 8rem;
+          display: flex;
+          P {
+            text-align: justify;
+          }
+          P:nth-child(2) {
+            margin-top: 3rem;
+          }
+          img {
+            width: 60rem;
+            margin-right: 8rem;
+          }
+        }
+      }
+    }
+
+    .ess_section2 {
+      padding-bottom: 20rem;
+      p {
+        text-align: center;
+        margin-top: 5rem;
+        font-weight: 600;
+      }
+    }
+
+    .ess_section3 {
+      padding-bottom: 20rem;
+      .element {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        li {
+          & p:nth-child(2) {
+            color: #104183;
+          }
+        }
+      }
+
+      .text_content {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 25rem;
+          .title {
+            display: flex;
+            $size: 10rem;
+            .icon {
+              width: $size;
+              height: 10rem;
+              background-color: #104183;
+              text-align: center;
+              line-height: $size;
+              border-radius: 50%;
+              border: 1px solid #fff;
+              box-shadow: 2px 4px 4px 0px #00000040;
+              font-size: 2.2rem;
+              font-weight: bold;
+              color: #fff;
+            }
+            p {
+              line-height: $size;
+              font-size: 2.8rem;
+              font-weight: bold;
+              color: #181818;
+              margin-left: 2rem;
+            }
+          }
+          > p {
+            font-size: 2.4rem;
+            margin-left: 16rem;
+          }
+        }
+      }
+    }
+
+    .ess_section4 {
+      > p {
+        font-size: 2.8rem;
+      }
+      .content {
+        margin-top: 10rem;
+        li {
+          margin-top: 4rem;
+          display: flex;
+          align-items: center;
+          .icon {
+            $size: 10rem;
+            width: $size;
+            height: 10rem;
+            background-color: #104183;
+            text-align: center;
+            line-height: $size;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            box-shadow: 2px 4px 4px 0px #00000040;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 2rem;
+          }
+          p {
+            width: 80%;
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+
+    .ess_section5 {
+      .content {
+        p {
+          font-size: 2.8rem;
+          color: #181818;
+          margin-bottom: 2rem;
+          font-weight: bold;
+        }
+        span {
+          display: block;
+          font-size: 2.4rem;
+          color: #181818;
+          margin-left: 4rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .ess_section6 {
+      padding-bottom: 20rem;
+    }
   }
 }
 @media (max-width: 1200px) {
