@@ -1126,6 +1126,10 @@ body {
   line-height: 8rem;
 }
 
+.company .company_history .company_history_line ul li .content .text {
+  width: 80%;
+}
+
 .company .company_history .company_history_line ul li .content .text p {
   font-size: 2.4rem;
   color: #181818;
@@ -1149,6 +1153,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 4rem;
 }
 
 .company .company_history .company_history_line ul li:nth-child(2) .content {
@@ -1917,7 +1922,7 @@ body {
   }
   .main_article_wrap .swiper-wrapper .main_section2 .main_section2_content .main_section2_text p {
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: 5rem;
   }
   .main_article_wrap .swiper-wrapper .main_section2 .main_section2_content .main_section2_text .main_section2_viewmore {
@@ -1928,7 +1933,7 @@ body {
   }
   .main_article_wrap .swiper-wrapper .main_section3 .main_section3_content .main_section3_icon div p {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .main_article_wrap .swiper-wrapper .main_section3 .main_section3_content .main_section3_text p {
     font-size: 2.2rem;
@@ -2052,6 +2057,7 @@ body {
     min-width: 5rem;
     width: 5rem;
     height: 5rem;
+    border: 2px solid #104183;
   }
   .company .company_history .company_history_line ul li .content .icon p {
     font-size: 1.6rem;
