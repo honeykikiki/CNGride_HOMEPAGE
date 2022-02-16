@@ -7,7 +7,6 @@ html {
 }
 html,
 body {
-  -webkit-touch-callout: none;
   position: relative;
   height: 100%;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -212,7 +211,7 @@ body {
       color: #fff;
     }
     & .main_section1 {
-      background-image: url('/public/main_background_img/setction1.png');
+      background-image: url('/main_background_img/setction1.png');
 
       & .main_section1_h1 {
         position: absolute;
@@ -250,7 +249,7 @@ body {
     }
 
     & .main_section2 {
-      background-image: url('/public/main_background_img/setction2.png');
+      background-image: url('/main_background_img/setction2.png');
 
       & .main_section2_h1 {
         padding: 4rem;
@@ -306,7 +305,7 @@ body {
     }
 
     & .main_section3 {
-      background-image: url('/public/main_background_img/setction3.png');
+      background-image: url('/main_background_img/setction3.png');
       & .main_section3_lineimg_one {
         position: absolute;
         left: 10rem;
@@ -389,7 +388,7 @@ body {
     }
 
     & .main_section4 {
-      background-image: url('/public/main_background_img/setction4.png');
+      background-image: url('/main_background_img/setction4.png');
       & .main_section4_lineimg_one {
         position: absolute;
         left: 70%;
@@ -462,7 +461,7 @@ body {
       }
     }
     .main_section5 {
-      background-image: url('/public/main_background_img/setction5.png');
+      background-image: url('/main_background_img/setction5.png');
       .main_section_wrap {
         .main_section5_mapbox {
           position: absolute;
@@ -604,7 +603,7 @@ body {
     }
 
     .company_icon_wrap {
-      background-image: url(/public/company/company-icon.png);
+      background-image: url(/company/company-icon.png);
       background-position: center;
       background-size: cover;
       width: 100%;
@@ -1193,7 +1192,7 @@ body {
         }
       }
       & .main_section5 {
-        background-image: url('/public/main_background_img/setction5.png');
+        background-image: url('/main_background_img/setction5.png');
       }
     }
   }
@@ -1659,7 +1658,7 @@ body {
         }
       }
       & .main_section5 {
-        background-image: url('/public/main_background_img/setction5.png');
+        background-image: url('/main_background_img/setction5.png');
       }
     }
   }
