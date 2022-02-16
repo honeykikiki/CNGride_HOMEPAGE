@@ -4,19 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "npm start",
     "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/honeykikiki/CNGride_HOMEPAGE.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/honeykikiki/CNGride_HOMEPAGE/issues"
-  },
-  "homepage": "https://github.com/honeykikiki/CNGride_HOMEPAGE#readme",
   "dependencies": {
     "express": "^4.17.2"
   }
