@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "npm start",
     "start": "node app.js"
   },
   "repository": {
