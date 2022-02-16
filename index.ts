@@ -121,6 +121,7 @@ const swiperOpction = {
 var Swiper: any = new Swiper('.mySwiper', swiperOpction);
 
 // Swiper.slideTo(2, 0);
+
 if ($('.company_navbox')) {
   $('.company_navbox').addEventListener('click', (e: Event) => {
     const target = e.target as HTMLElement;

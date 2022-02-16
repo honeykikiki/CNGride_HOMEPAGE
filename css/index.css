@@ -412,8 +412,8 @@ body {
 
 .main_article_wrap section h1 {
   color: #fff;
-  font-size: 4rem;
-  margin-top: 4rem;
+  font-size: 3.2rem;
+  margin-top: 3rem;
   opacity: 0;
 }
 
@@ -771,7 +771,7 @@ body {
 }
 
 .company h1 {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   color: #181818;
   text-align: center;
 }
@@ -808,7 +808,7 @@ body {
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -822,7 +822,7 @@ body {
           box-sizing: border-box;
   width: 100%;
   height: 100%;
-  line-height: 10rem;
+  line-height: 8rem;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.5s;
@@ -872,7 +872,7 @@ body {
 }
 
 .company .company_introduction .company_text_wrap p {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #181818;
 }
 
@@ -1015,7 +1015,7 @@ body {
 }
 
 .company .company_introduction .company_map_box .text p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-align: left;
   margin: 1rem;
 }
@@ -1030,7 +1030,7 @@ body {
 }
 
 .company .company_history .company_text_wrap p {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   text-align: center;
   color: #181818;
 }
@@ -1073,7 +1073,7 @@ body {
   background-color: #104183;
   border-radius: 50%;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 10rem;
   color: white;
   position: absolute;
@@ -1120,7 +1120,7 @@ body {
 
 .company .company_history .company_history_line ul li .content .icon p {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: black;
   line-height: 8rem;
@@ -1131,7 +1131,7 @@ body {
 }
 
 .company .company_history .company_history_line ul li .content .text p {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   color: #181818;
 }
 
@@ -1244,14 +1244,14 @@ body {
 }
 
 .ess h2 {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   color: #0072a0;
   padding-top: 20rem;
   margin-bottom: 10rem;
 }
 
 .ess p {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #181818;
   text-align: justify;
 }
@@ -1267,7 +1267,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 4.8rem;
+  font-size: 4rem;
   width: 100%;
   text-align: center;
 }
@@ -1374,13 +1374,13 @@ body {
 }
 
 .ess .ess_section_wrap .ess_section3 .element li p:nth-child(2) {
-  font-size: 2.4rem;
+  font-size: 2rem;
+  font-weight: bold;
   color: #104183;
 }
 
 .ess .ess_section_wrap .ess_section3 .element li p:nth-child(3) {
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .ess .ess_section_wrap .ess_section3 .text_content {
@@ -1432,14 +1432,14 @@ body {
 
 .ess .ess_section_wrap .ess_section3 .text_content .box .title p {
   line-height: 10rem;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #181818;
   margin-left: 2rem;
 }
 
 .ess .ess_section_wrap .ess_section3 .text_content .box > p {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   margin-left: 16rem;
 }
 
@@ -1454,7 +1454,7 @@ body {
 }
 
 .ess .ess_section_wrap .ess_section4 > p {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 
 .ess .ess_section_wrap .ess_section4 .content {
@@ -1489,7 +1489,7 @@ body {
 
 .ess .ess_section_wrap .ess_section4 .content li p {
   width: 80%;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .ess .ess_section_wrap .ess_section5 {
@@ -1499,7 +1499,7 @@ body {
 }
 
 .ess .ess_section_wrap .ess_section5 .content p {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #181818;
   margin-bottom: 2rem;
   font-weight: bold;
@@ -1507,7 +1507,7 @@ body {
 
 .ess .ess_section_wrap .ess_section5 .content span {
   display: block;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   color: #181818;
   margin-left: 4rem;
   margin-bottom: 4rem;
@@ -1965,6 +1965,25 @@ body {
   .company .company_title_box img {
     height: 20rem;
   }
+  .company .company_title_box .company_navbox {
+    top: 0rem;
+  }
+  .company .company_title_box .company_navbox ul {
+    height: 8rem;
+  }
+  .company .company_title_box .company_navbox ul li {
+    line-height: 8rem;
+  }
+  .company .company_title_box .company_navbox ul li p {
+    font-size: 2.8rem;
+    color: #181818;
+  }
+  .company .company_title_box .company_navbox ul .border_line:active {
+    border-bottom: 5px solid #0077a7;
+  }
+  .company .company_title_box .company_navbox ul .border_line::after {
+    height: 5px;
+  }
   .company .company_introduction .company_text_wrap {
     width: calc(100% - 40px);
   }
@@ -2211,6 +2230,9 @@ body {
   .ess .ess_section_wrap .ess_section3 .text_content .box {
     height: 30rem;
     height: 35rem;
+  }
+  .ess .ess_section_wrap .ess_section3 .text_content .box p {
+    margin-left: 14rem;
   }
   .ess .ess_section_wrap .ess_section3 .text_content > div:nth-child(2) > p {
     margin-top: -10rem;
