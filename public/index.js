@@ -128,7 +128,7 @@ if ($('.company_navbox')) {
 if (window.innerWidth < 767) {
     const essSoulationImg = document.querySelector('.ess_section2_img');
     if (essSoulationImg) {
-        essSoulationImg.src = '/public/Ess/system_mobile.png';
+        essSoulationImg.src = '/Ess/system_mobile.png';
     }
 }
 window.addEventListener('scroll', () => {

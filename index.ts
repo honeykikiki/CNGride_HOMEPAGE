@@ -150,7 +150,7 @@ if (window.innerWidth < 767) {
     '.ess_section2_img',
   ) as HTMLImageElement;
   if (essSoulationImg) {
-    essSoulationImg.src = '/public/Ess/system_mobile.png';
+    essSoulationImg.src = '/Ess/system_mobile.png';
   }
 }
 
