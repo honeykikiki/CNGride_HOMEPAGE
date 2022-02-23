@@ -86,6 +86,11 @@
   }
 }
 
+.line-ani {
+  -webkit-animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(0px);
@@ -558,8 +563,6 @@ body {
   text-align: right;
   width: 100%;
   overflow: hidden;
-  -webkit-animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .main_article_wrap .swiper-wrapper .main_section2 .main_section2_content .main_section2_text .main_section2_viewmore div {

@@ -44,6 +44,9 @@
     width: 200%;
   }
 }
+.line-ani {
+  animation: line-ani 2.6s 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
 @keyframes slide-in-left {
   0% {
