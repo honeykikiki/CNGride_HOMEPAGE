@@ -53,6 +53,7 @@ const viewMoreMove = (select: string) => {
     }
   });
 };
+viewMoreMove('.moreImg');
 
 $('.menu-toggle').addEventListener('click', () => {
   if ($('.menu-bar-sm').style.opacity === '1') {

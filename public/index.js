@@ -45,6 +45,7 @@ const viewMoreMove = (select) => {
         }
     });
 };
+viewMoreMove('.moreImg');
 $('.menu-toggle').addEventListener('click', () => {
     if ($('.menu-bar-sm').style.opacity === '1') {
         $('.menu-bar-sm').style.display = 'none';
